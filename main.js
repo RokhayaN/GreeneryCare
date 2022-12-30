@@ -1,10 +1,11 @@
 //Create or select
 
 
-// first navBar1 el
+//a- navBar 
 let mainContainer = document.querySelector("#mainDiv")
 
 let navBar1 = document.createElement("nav");
+let navInnerBox = document.createElement("div");
 let logo = document.createElement("div");
 let menu = document.createElement("ul");
 let home = document.createElement("li")
@@ -16,11 +17,9 @@ let linkToform = document.createElement("a");
 let linkToCart = document.createElement("a")
 
 
-//2nd navbar el
-
-
 //modify
 navBar1.classList = "navbar";
+navInnerBox.className = "max-width"
 
 logo.innerText = "Logo goes here"
 logo.classList = "logo";
@@ -52,8 +51,10 @@ linkToform.innerHTML = ("signIn")
 
 //add or append
 mainContainer.append(navBar1);
-navBar1.append(logo,menu);
+navBar1.appendChild(navInnerBox);
+navInnerBox.append(logo,menu);
 menu.append(search,home,signIn,cart,);
 home.appendChild(linkToHome);
 signIn.appendChild(linkToform);
 cart.appendChild(linkToCart);
+
