@@ -24,7 +24,7 @@
     align-items: center; 
     /* display: flex-wrap; */
     justify-content: space-between;  
-     border: solid 2px black ; 
+     /* border: solid 2px black ;  */
      margin-top: 0px;
      padding-top: 0px;
     
@@ -37,7 +37,7 @@
     
     list-style: none;
     display: inline-block;
-    border: solid 2px orange;
+    /* border: solid 2px orange; */
     
 }
 
@@ -50,3 +50,58 @@
     
 
  }
+ .navbar .menu li:hover{
+    color: green;
+    cursor:  pointer;
+
+ }
+
+.navbar .menu li a:hover{
+    color: green;
+    cursor:  pointer;
+}
+
+/* home styling */
+.homeS{
+    display: flex;
+    font-family: "PT Sans", sans-serif;
+    background: url("./images/bath-Plant.jpg");
+    background-size: cover;
+    width: 100%;
+    /* border: solid 2px rgb(26, 36, 7); */
+    height: 1000px;
+    
+}
+.homeS .max-width{
+    margin-top: auto 0 auto 40px;
+    /* border: solid 2px red; */
+    
+    
+};
+.homeS .home-content .welcomeT{
+    font-weight: 300;
+    
+}
+
+.button{
+    border-radius: 50%;
+    margin: 50% 50% 30% 10%;
+    height: 320px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgb(4, 113, 22);
+    color: white;
+}
+
+.button-box{
+border: solid 2px green;
+border-radius: 50%;
+height: 320px;
+width: 300px;
+margin: 50% 50% 30% 10%;
+
+
+};
