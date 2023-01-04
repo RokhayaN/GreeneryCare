@@ -8,7 +8,8 @@ let logo = document.createElement("div");
 let logoImg = document.createElement("img");
 let menu = document.createElement("ul");
 let home = document.createElement("li")
-let services = document.createElement("li");
+let about = document.createElement("li")
+let gallery = document.createElement("li");
 let search = document.createElement("li");
 let signIn = document.createElement("li");
 let cart = document.createElement("li");
@@ -21,12 +22,19 @@ let linkToCart = document.createElement("a");
 let homeSection = document.createElement("section");
 let homeInnerBox = document.createElement("div");
 let homeContent = document.createElement("div");
-let welcomePara = document.createElement("div");
+let welcomeBox = document.createElement("div");
+let welcomePara = document.createElement("p");
 let shopBox = document.createElement("div");
 let BtnPlants = document.createElement("button");
 
+//c- gallery 
+
+let gallerySection = document.createElement("section");
+let galleryInnerBox = document.createElement("div");
+let galleryContent = document.createElement("div");
 
 
+// ---------------------------------------------------------------------------------------
 //modify
 // a-navbar
 
@@ -49,25 +57,29 @@ menu.classList = "menu";
 //home.innerHTML = "Home";
 home.classList = "home1";
 
+about.className = "about";
+about.innerHTML = "About";
+
 search.innerHTML = "Search";
 search.classList = "search-plants";
 
 //signIn.innerText = "SignIn"
-signIn.classList = "signIn";
+//signIn.classList = "signIn";
 
-services.innerHTML = "Services";
-services.classList = "services"
+gallery.innerHTML = "Gallery";
+gallery.classList = "gallery";
 
 //cart.classList = "cart"
 //cart.innerText = "Cart";
 cart.classList = "cart";
 
+about.setAttribute("href", "./about.html")
 linkToCart.setAttribute("href", "#");
 linkToCart.innerHTML = "Cart"
-linkToHome.setAttribute("href", "#"); 
+linkToHome.setAttribute("href", "./index.html"); 
 linkToHome.innerHTML = "Home";
 linkToform.setAttribute("href", "#");
-linkToform.innerHTML = ("signIn");
+linkToform.innerHTML = ("Sign In");
 
 //b-home
 homeSection.className = "homeS";
@@ -76,31 +88,55 @@ homeSection.id = "homeS";
 
 homeInnerBox.className = "max-width";
 homeContent.classList = "home-content";
-welcomePara.classList = "welcomeT";
+welcomeBox.classList = "welcomeT";
+welcomeBox.id = "welcomeT";
 welcomePara.innerHTML = "Welcome to Plant Studio, Shop our Catalog here";
-BtnPlants.innerHTML = "Shop Here";
+welcomePara.classList = "para";
+BtnPlants.innerHTML = "Meet your new plant";
 BtnPlants.classList = "button";
 shopBox.classList = "button-box";
 
+//c-gallery
+gallerySection.className = "plants-box";
+galleryInnerBox.className = "max-width";
+galleryContent.className = "Allplants";
+galleryContent.innerHTML = "Plants goes Here";
+
+
+// ---------------------------------------------------------------------------------------
 
 //add or append
 //mainContainer.append(navBar1, homeSection);
-document.body.append(navBar1, homeSection);
+document.body.append(navBar1, homeSection,gallerySection);
 
 //a navbar 
 navBar1.appendChild(navInnerBox);
 navInnerBox.append(logo,menu);
 logo.appendChild(logoImg);
-menu.append(search,home,services,signIn,cart,);
+menu.append(search,home,gallery,signIn,cart,);
 home.appendChild(linkToHome);
 signIn.appendChild(linkToform);
 cart.appendChild(linkToCart);
 
 //home
-homeSection.append(homeInnerBox);
+homeSection.append(homeInnerBox, welcomeBox);
+welcomeBox.append(welcomePara);
 homeInnerBox.append(homeContent);
-homeContent.append(welcomePara, shopBox);
+homeContent.append(shopBox);
 shopBox.appendChild(BtnPlants);
+
+//c-gallery
+
+gallerySection.append(galleryInnerBox);
+galleryInnerBox.append(galleryContent);
+
+
+
+// api goes here
+//----------------------------------------------------------------------------------------------
+
+
+
 
 
 

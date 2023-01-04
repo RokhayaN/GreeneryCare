@@ -12,7 +12,7 @@
 .navbar{
     width: 100%;
     font-family: 'PT Sans', sans-serif;
-    border: dotted 2px black ;
+    /* border: dotted 2px black ; */
     /* padding: 0px 5px 10px 0px; */
     margin-top: 0px ;
     
@@ -38,6 +38,9 @@
     list-style: none;
     display: inline-block;
     /* border: solid 2px orange; */
+    color: red;
+    text-decoration: none;
+    font-size: 25px;
     
 }
 
@@ -46,7 +49,9 @@
      display: inline-block; 
     /* border: solid 1px orange; */
     /* border: solid 2px orange; */
+    font-size: 25px;
     padding: 20px;
+    
     
 
  }
@@ -64,44 +69,67 @@
 /* home styling */
 .homeS{
     display: flex;
-    font-family: "PT Sans", sans-serif;
-    background: url("./images/bath-Plant.jpg");
+    font-family: "PT Sans",700;
+    background: url("./images/mBanner.jpg");
     background-size: cover;
     width: 100%;
     /* border: solid 2px rgb(26, 36, 7); */
     height: 1000px;
     
 }
+ 
 .homeS .max-width{
     margin-top: auto 0 auto 40px;
     /* border: solid 2px red; */
     
     
 };
-.homeS .home-content .welcomeT{
-    font-weight: 300;
-    
+/* COME BACK HERE LATER */
+
+.homeS .welcomeT .para{
+        display: flex;
+        width: 100%;
+        font-size: larger;
+        font-weight: 700;
+        justify-content: center;
+        margin: 250px;
+        color: aqua; 
+        background-color: brown;
 }
 
 .button{
     border-radius: 50%;
-    margin: 50% 50% 30% 10%;
+    margin: 80% 50% 30% 20%;
     height: 320px;
     width: 300px;
     cursor: pointer;
+    background-color: beige;
+     border: solid 2px green; 
+    font-size: 25px;
 }
 
 .button:hover{
-    background-color: rgb(4, 113, 22);
+    background-color: rgb(86, 113, 45);
     color: white;
+    border: solid 2px green;
 }
 
-.button-box{
+/* .button-box{ 
+background-color: beige;
 border: solid 2px green;
 border-radius: 50%;
 height: 320px;
 width: 300px;
 margin: 50% 50% 30% 10%;
+/* background: url("./images/mBanner.jpg") */
+/* background-color: rgb(86, 113, 45)} */
 
+.plants-box{
+    display: flex;
+    font-family: "PT Sans",700;
+    background-size: cover;
+    width: 100%;
+    /* border: solid 2px rgb(26, 36, 7); */
+    height: 1000px;
 
-};
+}
