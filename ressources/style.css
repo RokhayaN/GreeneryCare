@@ -114,7 +114,33 @@
     border: solid 2px green;
 }
 
+/* responsive media query starts here */
+@media(max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px ;
+    }
+    
+}
+@media(max-width: 991px){
+    .max-width{
+        padding: 0 50px;  
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+@media(max-width: 690px){  
+    .max-width{
+        padding: 0 23px;
+    }
+}
 /* .button-box{ 
+
 background-color: beige;
 border: solid 2px green;
 border-radius: 50%;

@@ -125,3 +125,7 @@ cart.appendChild(linkToCart);
 about.appendChild(linkToAbout);
 gallery.appendChild(linkToGallery);
 
+
+
+//---------------------------------------------------------------------------------------
+
