@@ -124,7 +124,7 @@ margin: 50% 50% 30% 10%;
 /* background: url("./images/mBanner.jpg") */
 /* background-color: rgb(86, 113, 45)} */
 
-.plants-box{
+.plants-box .max-width{
     display: flex;
     font-family: "PT Sans",700;
     background-size: cover;
