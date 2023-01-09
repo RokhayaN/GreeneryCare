@@ -1,3 +1,5 @@
+//Create or select
+
 //a- navBar 
 
 let navBar1 = document.createElement("nav");
@@ -58,7 +60,7 @@ menu.classList = "menu";
 //home.innerHTML = "Home";
 home.classList = "home1";
 
-//about.className = "about";
+about.className = "about";
 //about.innerHTML = "About";
 
 search.innerHTML = "Search";
@@ -126,6 +128,106 @@ about.appendChild(linkToAbout);
 gallery.appendChild(linkToGallery);
 
 
+//home
+homeSection.append(homeInnerBox, welcomeBox);
+welcomeBox.append(welcomePara);
+homeInnerBox.append(homeContent);
+homeContent.append(shopBox);
+shopBox.appendChild(BtnPlants);
 
-//---------------------------------------------------------------------------------------
+//c-gallery
+
+gallerySection.append(galleryInnerBox);
+galleryInnerBox.append(galleryContent, plantCard);
+
+
+
+// api goes here
+//----------------------------------------------------------------------------------------------
+
+const viewPlants = async () => {
+
+     const options = {
+     method: 'GET',
+         headers: {
+            'X-RapidAPI-Key': '27cb2164d7msh22d782256abfd09p1f859ejsn5db7d81455b2',
+            'X-RapidAPI-Host': 'house-plants2.p.rapidapi.com'
+         }
+     };
+    
+    const rawData = await (fetch('https://house-plants2.p.rapidapi.com/', options));
+    const jsonData = await rawData.json();
+     console.log(jsonData);
+
+
+
+
+//---------------------------------------------------------------------------------------------------
+
+
+
+jsonData.forEach((plant) => { 
+
+    // for(let plant of jsonData ){
+    
+console.log(plant);
+    
+    //}
+let plantCard = document.createElement("div"); 
+    //add img
+let plantPic = document.createElement("img");
+//add plant name 
+let plantName = document.createElement("h4");
+//add plant cares 
+let waterIntake = document.createElement("p");
+let sunLight = document.createElement("p");
+let growthP = document.createElement("p"); 
+
+//const ePlant = plant.id;
+// //console.log(ePlant);
+
+plantCard.className = "plantCard";
+plantPic.className = "plantImg";
+plantPic.src = plant.img;
+waterIntake = plant.Watering;
+plantName = plant["common name"];
+sunLight = plant["light ideal"];
+growthP = plant.Growth; 
+
+
+plantCard.append(plantPic, waterIntake, plantName, sunLight, growthP);
+
+
+
+});
+// console.log(jsonData.length)  
+
+// for(let plant of jsonData ){
+    
+//     console.log(plant);
+
+//      }
+      
+ };
+
+ const displayPlants = document.querySelector(".button");
+ BtnPlants.addEventListener("click", viewPlants);
+
+
+//viewPlants();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
